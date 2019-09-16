@@ -1,0 +1,54 @@
+.btn-app{
+    margin: 0px 
+}
+
+.btn-app>.fa, .btn-app>.glyphicon, .btn-app>.ion {
+    font-size: 40px;
+    display: block;
+}
+
+.btn-login {
+    height: 200px;
+    width: 240px;
+    font-size: 30px;
+    padding-top: 20%;
+}
+
+.ikon{
+    padding-right: 40px;
+}
+
+.login-box{
+	width: 450px;
+}
+
+.login-box-msg{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.table, .table:th, .table:td {
+   border: 1px solid black;
+}
+
+
+
+
+
+.table-bordered {
+    border: 1px solid #999;
+}
+
+table.dataTable thead th, table.dataTable tbody td {
+  border-top: 1px solid #999;
+  border-right: 1px solid #999;
+}
+
+table.dataTable thead tr th:last-child,
+table.dataTable tbody tr td:last-child {
+  border-right: none;
+}
+
+.btn-numpuk{
+  margin: 5px;
+}
