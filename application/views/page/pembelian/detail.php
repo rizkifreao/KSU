@@ -92,10 +92,10 @@ $rowItem = $this->M_item->getAll();
             <div class="row">
               <div class="col-md-12">            
                 <div class="form-group">
-                  <label for="tanggal" class="col-sm-4 control-label">Item <?=$data->pembelianid?></label>
-                  <input type="hidden" class="form-control" placeholder="pembelianid" name="pembelianid" value="<?php echo $data->pembelianid;?>">
+                  <label for="tanggal" class="col-sm-4 control-label">Item</label>
+                  <input type="hidden" class="form-control" placeholder="pembelianid" name="pembelianid" value="<?=$data->pembelianid?>">
                   <div class="col-sm-8">
-	                  <select name="itemid" id="itemid" required class="form-control" required>
+	                  <select name="itemid" id="itemid" required class="custom-select" required>
 	                    <option value="">- Pilih Item -</option>
 	                    <?php foreach($rowItem as $item):?>
 	                    <option value="<?=$item->itemid?>" ><?=$item->nama_item?></option>
@@ -132,6 +132,9 @@ $rowItem = $this->M_item->getAll();
 
 
 <script>
+  $(document).ready(function() {
+    $('#itemid').select2();
+});
   function getDetail(ini) {
     var id = $(ini).attr('data-id');
     $.ajax({

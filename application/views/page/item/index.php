@@ -99,7 +99,7 @@ $rowSatuan = $this->M_mst_satuan->getAll();
                 <div class="form-group">
                   <label for="nama" class="col-sm-4 control-label">Satuan</label>
                   <div class="col-sm-8">
-                    <select name="satuanid" id="satuanid" class="form-control" required>
+                    <select name="satuanid" id="satuanid" class="form-control custom-select" required>
                     <option value="">- Pilih Satuan -</option>
                       <?php foreach ($rowSatuan as $key ) :?>
                       <option value="<?=$key->satuanid ?>"><?= $key->nama ?></option>
@@ -130,6 +130,9 @@ $rowSatuan = $this->M_mst_satuan->getAll();
 
 
 <script>
+  $(document).ready(function() {
+    $('#satuanid').select2();
+});
   function getDetail(ini) {
     var id = $(ini).attr('data-id');
     $.ajax({

@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="<?=base_url('extras/');?>bootstrap/css/bootstrap.min.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="<?=base_url('extras/');?>font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="<?=base_url('extras/');?>select2/dist/css/select2.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="<?=base_url('extras/');?>/ionicons/css/ionicons.min.css">
   <!-- Theme style -->
@@ -58,6 +59,10 @@
   }
   
 }
+
+  .custom-select {
+    width: 355px;       
+  }
 </style>
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -70,6 +75,7 @@
     <script src="<?=base_url('extras/');?>plugins/jQuery/jQuery-2.2.0.min.js"></script>
     <!-- jQuery UI 1.11.4 -->
     <script src="<?=base_url('extras/');?>dist/js/jquery-ui.min.js"></script>
+    <script src="<?=base_url('extras/');?>select2/dist/js/select2.full.min.js"></script>
 </head>
 <body class="sidebar-mini skin-purple-light">
 <div class="wrapper">

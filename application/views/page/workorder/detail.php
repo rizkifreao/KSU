@@ -131,7 +131,7 @@ $Items = $this->M_item->getAll();
                   <label for="tanggal" class="col-sm-4 control-label">Item</label>
                   <input type="hidden" class="form-control" placeholder="workorderid" name="workorderid" value="<?=$data->workorderid;?>">
                   <div class="col-sm-8">
-	                  <select name="itemID" id="itemID" required class="form-control" onchange="getDetail(this)" data-pelangganid="<?=$data->pelangganid;?>">
+	                  <select name="itemID" id="itemID" required class="custom-select" onchange="getDetail(this)" data-pelangganid="<?=$data->pelangganid;?>">
 	                    <option value="">- Pilih Item -</option>
 	                    <?php foreach($Items as $item):?>
 	                    <option value="<?=$item->itemid?>" ><?=$item->nama_item?></option>
@@ -271,6 +271,9 @@ $Items = $this->M_item->getAll();
 
 
 <script>
+  $(document).ready(function() {
+    $('#itemID').select2();
+});
   function getDetail(ini) {
     var pelangganid = $(ini).attr('data-pelangganid');
     var id = $('#itemID').val();
