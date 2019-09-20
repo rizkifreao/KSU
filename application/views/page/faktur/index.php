@@ -19,7 +19,8 @@
             Tabel Data
           </h3>
           <div class="pull-right">
-            <a href="<?=site_url("Cetak/laporanfaktur")?>" class="btn btn-success"><i class="fa fa-print"></i> Print</a>
+            <a href="<?=site_url("Cetak/laporanfaktur")?>" class="btn btn-success"><i class="fa fa-print"></i> Cetak Semua</a>
+            <a href="<?=site_url("Cetak/laporanharian")?>" class="btn btn-primary"><i class="fa fa-print"></i> Cetak Hari ini</a>
           </div>
         </div>
         <!-- /.box-header -->

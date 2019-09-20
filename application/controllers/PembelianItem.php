@@ -36,12 +36,14 @@ class PembelianItem extends CI_Controller {
 		$data["nofaktur"] = $this->input->post("nofaktur");
 		$data["suplier"] = $this->input->post("suplier");
 		
-		if($id) 
+		if($id){ 
 			$this->M_pembelian->update($id,$data);
-		else 
+			$lastID = $this->db->insert_id();
+		}else{ 
 			$this->M_pembelian->add($data);
-
-		redirect($this->kelas);
+			$lastID = $this->db->insert_id();
+		}	
+		redirect($this->kelas."/detail/".$lastID);
 	}
 
 	public function addTanggal(){

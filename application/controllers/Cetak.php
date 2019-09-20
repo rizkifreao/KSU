@@ -37,15 +37,18 @@ class Cetak extends CI_Controller {
         $this->load->view("page/export/templatePdfAll",$data);
 	}
 
-	// public function pelanggan($id){
-    //     $data['filename'] = "Pelanggan";
+	public function laporanharian(){
+        $data['filename'] = "Laporan Faktur Harian";
 
-	// 	$data["data"] = $this->M_pelanggan->getDetail($id);
-	// 	$data["rowData"] = $this->M_workorder->getAllBy("pelangganid = $id");
+		$data["rowData"] = $this->M_penjualan->getAllBy(
+			"tanggal_faktur = '".date('Y-m-d ')."'"
+		);
+		$data["nomorfaktur"] = 'Harian';
 
-	// 	$data['konten'] = "page/export/pelanggan";
-    //     $this->load->view("page/export/templatePdf",$data);
-	// }
+		$data['konten'] = "page/export/laporanharian";
+		$this->load->view("page/export/templatePdfAll",$data);
+		// echo json_encode($data);
+	}
 
 	public function workorder($id){
         $data['filename'] = "Workorder";

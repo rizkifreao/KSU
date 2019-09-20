@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['SITENAME'] = 'KASU PAKSI';
-$config['base_url'] = 'http://'.$_SERVER['HTTP_HOST'].'/KSU/';
+$config['base_url'] = 'http://ksu.net';
 
 /*
 |--------------------------------------------------------------------------
